@@ -1,0 +1,3 @@
+dataset:
+  name:  [trianglesens, collidersens, chainsens]
+  sem_name: [ linear ]

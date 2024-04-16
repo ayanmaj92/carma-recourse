@@ -1,0 +1,6 @@
+*/__pycache__/*
+recourse_utils/__pycache__/
+*.pyc
+.DS_Store
+.idea/
+.ipynb_checkpoints/

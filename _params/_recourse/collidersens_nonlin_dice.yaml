@@ -1,0 +1,36 @@
+device: cpu
+root_dir: dice_training
+seed: 500
+verbose: True
+dataset:
+  root: New_Data/recourse
+  name: collidersens
+  sem_name: non-linear # non-linear #non-additive
+  splits: [ 0.5,0.25,0.25 ]
+  k_fold: 1
+  shuffle_train: True
+  single_split: False
+  loss: default
+  scale: default
+  num_samples: 20000
+  base_version: 1
+  add_noise: False
+  type: torch
+  use_edge_attr: False
+dice_vae:
+  name: 'dice_vae'
+  params:
+    max_epochs: 500
+    val_every_n_epochs: 10
+    enc_hdim_list: [4, 4]
+    act: relu
+    batch_size: 512
+    bn: False
+    drop_rate: 0.0
+    z_dim: 4
+    optim_lr: 0.005
+    loss_type: 'l2'
+    beta_kld: 1
+    hinge_margin: 0.05
+    valid_reg: 5
+    immut_feats: [0]  # 0 will always be here, as 0 --> S. Can add other ids here.

@@ -1,0 +1,33 @@
+device: auto
+root_dir: _models_trained/clf
+seed: 100
+verbose: True
+dataset:
+  root: New_Data/clf
+  name: collidersens
+  sem_name: linear # non-linear #non-additive
+  splits: [ 0.5,0.25,0.25 ]
+  k_fold: 1
+  shuffle_train: True
+  single_split: False
+  loss: default
+  scale: default
+  num_samples: 20000
+  base_version: 1
+  add_noise: False
+  type: torch
+  use_edge_attr: False
+classifier:
+  input_dim: 4
+  name: linear
+  params:
+    act: relu
+    batch_size: 256
+    bn: false
+    dim_list: [ ]
+    drop_rate: 0.0
+    epochs: 500
+    fairness: none
+    learning_rate: 0.001
+    lmbd: 0.0
+    sens_idx: 0

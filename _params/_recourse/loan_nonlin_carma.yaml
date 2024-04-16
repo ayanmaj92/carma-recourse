@@ -1,0 +1,49 @@
+device: cpu
+root_dir: carma_results/causal_nf/
+seed: 500
+verbose: True
+dataset:
+  root: New_Data/recourse
+  name: loan
+  sem_name: non-linear # non-linear #non-additive
+  splits: [ 0.5,0.25,0.25 ]
+  k_fold: 1
+  shuffle_train: True
+  single_split: False
+  loss: default
+  scale: default
+  num_samples: 20000
+  base_version: 1
+  add_noise: False
+  type: torch
+  use_edge_attr: False
+carma:
+  name: 'carma'
+  params:
+    features_to_intervene: [2,3,5,6]
+    mask_nw_nodes: 32
+    mask_nw_n_layers: 2
+    action_nw_nodes: 32
+    action_nw_n_layers: 2
+    act: relu
+    bn: False
+    drop_rate: 0.0
+    batch_size: 32
+    optim_max_epochs: 500
+    optim_lr: 0.0001
+    optim_optimizer: adam
+    # L2 regularization
+    optim_weight_decay: 5e-4
+    # SGD momentum
+    optim_momentum: 0.9
+    # scheduler: none, steps, cos
+    optim_scheduler: 'none'
+    # Steps for 'steps' scheduler (in epochs)
+    optim_steps: [ 50, 100 ]
+    # Learning rate multiplier for 'steps' policy
+    optim_lr_decay: 0.1
+    # Learning rate multiplier for 'exp' policy
+    optim_gamma: 0.99
+    hinge_margin: 0.001
+    tau: 0.05
+    device: cpu

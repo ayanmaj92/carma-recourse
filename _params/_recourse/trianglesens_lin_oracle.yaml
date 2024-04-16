@@ -1,0 +1,23 @@
+device: auto
+root_dir: oracle_recourse
+seed: 500
+verbose: True
+dataset:
+  root: New_Data/recourse
+  name: trianglesens
+  sem_name: linear # non-linear #non-additive
+  splits: [ 0.5,0.25,0.25 ]
+  k_fold: 1
+  shuffle_train: True
+  single_split: False
+  loss: default
+  scale: default
+  num_samples: 20000
+  base_version: 1
+  add_noise: False
+  type: torch
+  use_edge_attr: False
+oracle:
+  params:
+    batch_size: 1
+    num_workers: 1
