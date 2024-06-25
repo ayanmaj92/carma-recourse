@@ -5,7 +5,7 @@
 <img src="logo.png" alt="logo" width="100"/>
 
 This repository contains the code implementing the CARMA approach, a practical framework for generating recommendations for causal algorithmic recourse at scale. 
-CARMA was introduced in the paper `CARMA: A practical framework to generate recommendations for causal algorithmic recourse at scale` and was accepted at the [ACM FAccT 2024](https://facctconference.org/2024/) conference.
+CARMA was introduced in the paper `CARMA: A practical framework to generate recommendations for causal algorithmic recourse at scale` and was accepted at the [ACM FAccT 2024](https://facctconference.org/2024/) conference. Check out the full paper at [this link](https://dl.acm.org/doi/10.1145/3630106.3659003).
 ## Overview
 1. [Setup](#setup)
 2. [Training downstream decision-making classifier](#clf)
@@ -295,7 +295,7 @@ if 'sens' in name.lower() or name.lower() == 'loan':
 Analyzing some of the results, e.g., the feature interventions, the Optuna hyperparameter tuning, and the causal validity of the proposed interventions, can be found in `_analyze_helpers/`.
 
 ## Contact and citation
-For any questions, please contact `ayanm{at}mpi-sws.org`. For citation, please cite our original paper.
+For any questions, please contact `ayanm{at}mpi-sws.org`. For citation, please cite our [original paper](https://dl.acm.org/doi/10.1145/3630106.3659003).
 
 ## License
 This work is licensed under a
