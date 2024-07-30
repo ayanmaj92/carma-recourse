@@ -87,8 +87,9 @@ python causal_flows/generate_jobs.py --help
 ```
 For instance, one can run it as:
 ```bash
-python causal_flows/generate_jobs.py --grid_file _params/_grid/causal_nf/base.yaml --format bash --jobs_per_file 20000 --batch_size 500 --wandb_mode disabled
+python causal_flows/generate_jobs.py --grid_file _params/_grid/causal_nf/base.yaml --format shell --jobs_per_file 20000 --batch_size 500 --wandb_mode disabled
 ```
+This will create the scripts to run in a folder like `_params/_grid/causal_nf/base/jobs_sh/`. We will need to run all files without `_test` in the name.
 All results are saved into the directory defined in the `base.yaml` file, e.g., for causal flows `causal_nf/`:
 ```yaml
 root_dir: [ hparam_grid_causal_mods/comparison_causal_nf ]
