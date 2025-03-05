@@ -1,6 +1,7 @@
 # CARMA: Causal Algorithmic Recourse with (Neural Network) Model-based Amortization
 
-[![CC BY-NC 4.0][cc-by-nc-shield]][cc-by-nc]
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 
 <img src="logo.png" alt="logo" width="100"/>
 
